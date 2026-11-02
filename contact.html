@@ -1,0 +1,392 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050a18">
+<meta name="description" content="Personal portfolio of Melda Amelia Putri.">
+<title>Let's Connect | Melda Amelia Putri</title>
+<link rel="stylesheet" href="style.css">
+<script src="stars.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+ <a class="brand" href="index.html">
+  <span class="brand-mark">✦</span>
+  <span>Melda Amelia Putri</span>
+ </a>
+
+ <nav class="main-nav" aria-label="Main navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Me</a>
+  <a href="journey.html">Journey</a>
+  <a href="skills.html">Skills</a>
+  <a href="achievements.html">Achievements</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="certificates.html">Certificates</a>
+  <a href="projects.html">Projects</a>
+  <a href="interests.html">Interests</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html" class="active">Contact</a>
+ </nav>
+</header>
+
+<main class="page-shell">
+
+ <div class="page-heading">
+  <span class="eyebrow">GOOD THINGS BEGIN WITH A HELLO</span>
+
+  <h1>Let's <span>connect.</span></h1>
+
+  <p class="intro">
+   Curious about my experiences, interested in collaborating,
+   or just want to say hello? I'd love to hear from you.
+  </p>
+ </div>
+
+ <div class="contact-layout">
+
+  <div class="contact-side">
+
+   <div class="contact-orb">✦</div>
+
+   <h2>Let's make a meaningful connection.</h2>
+
+   <p>
+    Whether it's an idea, a collaboration, a business inquiry,
+    or a friendly hello, feel free to reach out.
+   </p>
+
+   <div class="contact-links">
+
+    <a href="https://www.instagram.com/cis.cake._/"
+       target="_blank" rel="noreferrer">
+     Instagram <span>↗</span>
+    </a>
+
+    <a href="https://www.tiktok.com/@cherryyx"
+       target="_blank" rel="noreferrer">
+     TikTok <span>↗</span>
+    </a>
+
+    <div class="contact-link-row">
+     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=meldap145@gmail.com&su=Halo%20Melda"
+        target="_blank" rel="noreferrer" id="direct-email-link"
+        title="Klik untuk langsung kirim pesan lewat Gmail">
+      meldap145@gmail.com <span>↗</span>
+     </a>
+     <button type="button" class="btn-copy-email" id="btn-copy-email" title="Salin alamat email">
+      <span id="copy-text">📋 Salin</span>
+     </button>
+    </div>
+
+   </div>
+  </div>
+
+  <div class="contact-form-wrap">
+
+   <!-- CONTACT FORM CONNECTED TO EMAIL -->
+
+   <form id="contact-form"
+         action="https://formsubmit.co/meldap145@gmail.com"
+         method="POST">
+
+    <input type="hidden" name="_subject"
+           value="New Message from Melda's Portfolio">
+
+    <input type="hidden" name="_template"
+           value="table">
+
+    <input type="hidden" name="_captcha"
+           value="false">
+
+    <input type="hidden" name="_next"
+           value="contact.html?submitted=true">
+
+    <label for="name">Your name</label>
+
+    <input
+     id="name"
+     name="Name"
+     type="text"
+     placeholder="What should I call you?"
+     required
+    >
+
+    <label for="instagram">
+     Instagram username
+     <span class="muted">(optional)</span>
+    </label>
+
+    <input
+     id="instagram"
+     name="Instagram Username"
+     type="text"
+     placeholder="@yourusername"
+    >
+
+    <label for="email">
+     Email address
+     <span class="muted">(optional)</span>
+    </label>
+
+    <input
+     id="email"
+     name="Email Address"
+     type="email"
+     placeholder="you@example.com"
+    >
+
+    <label for="topic">What's on your mind?</label>
+
+    <select id="topic" name="Topic" required>
+
+      <option value="Ask About My Experiences">
+       Ask About My Experiences
+      </option>
+
+      <option value="Collaboration & Partnership">
+       Collaboration & Partnership
+      </option>
+
+      <option value="Business Inquiry">
+       Business Inquiry
+      </option>
+
+      <option value="Event Invitation">
+       Event Invitation
+      </option>
+
+      <option value="Share Something / Ask a Question">
+       Share Something / Ask a Question
+      </option>
+
+      <option value="Just Say Hello">
+       Just Say Hello
+      </option>
+
+      <option value="Other">
+       Other
+      </option>
+
+    </select>
+
+    <label for="message">Your message</label>
+
+    <textarea
+     id="message"
+     name="Message"
+     rows="5"
+     placeholder="Write your message here..."
+     required
+    ></textarea>
+
+    <button class="button primary" type="submit" id="submit-btn">
+     Send me a message ↗
+    </button>
+
+    <div class="form-direct-action">
+     <span>Ingin kirim langsung lewat Gmail?</span>
+     <a href="javascript:void(0)" id="quick-gmail-btn">Buka di Gmail Web ↗</a>
+    </div>
+
+    <p class="form-note">
+     Thank you for reaching out!
+     Your message will be sent directly to my email.
+    </p>
+
+   </form>
+
+  </div>
+
+ </div>
+
+ <!-- Modal Konfirmasi Pesan / Kelanjutan Pengiriman -->
+ <div id="contact-modal" class="contact-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="contact-modal-box">
+   <div class="modal-icon-glow">✦</div>
+   <h2 id="modal-title" style="font-size: 1.5rem; margin-bottom: 8px;">Pesan Anda Siap Diproses!</h2>
+   <p style="color: #c2d5f2; font-size: 0.92rem; margin-bottom: 16px;">
+    Terima kasih, <strong id="modal-name-display" style="color: #69e1ff;">Teman</strong>! Pesan Anda telah diproses untuk dikirim langsung ke email Melda (<strong style="color: #83c5ff;">meldap145@gmail.com</strong>).
+   </p>
+
+   <div class="modal-summary-card">
+    <div class="modal-summary-item">
+     <span class="modal-summary-label">Topik</span>
+     <span class="modal-summary-val" id="modal-topic-display">-</span>
+    </div>
+    <div class="modal-summary-item">
+     <span class="modal-summary-label">Pengirim</span>
+     <span class="modal-summary-val" id="modal-sender-display">-</span>
+    </div>
+    <div class="modal-summary-item">
+     <span class="modal-summary-label">Kontak</span>
+     <span class="modal-summary-val" id="modal-contact-display">-</span>
+    </div>
+    <div class="modal-msg-quote" id="modal-message-display">
+     "-"
+    </div>
+   </div>
+
+   <div class="modal-button-group">
+    <a id="modal-gmail-link" href="#" target="_blank" rel="noreferrer" class="button primary">
+     ✉ Buka & Kirim Lewat Gmail ↗
+    </a>
+    <button type="button" class="button" id="modal-close-btn">
+     Selesai & Kirim Pesan Lain
+    </button>
+   </div>
+  </div>
+ </div>
+
+ <nav class="page-switch" aria-label="Previous and next pages">
+
+  <a href="gallery.html">← Previous: Gallery</a>
+
+  <span class="page-number">11 / 11</span>
+
+  <a href="index.html">Next: Home →</a>
+
+ </nav>
+
+</main>
+
+<footer class="site-footer">
+
+ <div>
+  <strong>Melda Amelia Putri</strong>
+  <br>
+  <span class="footer-motto">
+   “Creating my own path, embracing every journey.”
+  </span>
+ </div>
+
+ <div>
+  © 2026 Melda Amelia Putri. All Rights Reserved.
+ </div>
+
+</footer>
+
+<script>
+// Copy email button
+const copyBtn = document.getElementById('btn-copy-email');
+if (copyBtn) {
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText('meldap145@gmail.com').then(() => {
+      const copyText = document.getElementById('copy-text');
+      copyBtn.classList.add('copied');
+      copyText.textContent = '✓ Disalin!';
+      setTimeout(() => {
+        copyBtn.classList.remove('copied');
+        copyText.textContent = '📋 Salin';
+      }, 2000);
+    });
+  });
+}
+
+// Quick Gmail button on the form
+const quickGmailBtn = document.getElementById('quick-gmail-btn');
+if (quickGmailBtn) {
+  quickGmailBtn.addEventListener('click', () => {
+    const name = document.getElementById('name').value.trim();
+    const topic = document.getElementById('topic').value;
+    const msg = document.getElementById('message').value.trim();
+    const ig = document.getElementById('instagram').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    let body = `Halo Melda,\n\nNama: ${name || '[Nama]'}\n`;
+    if (ig) body += `Instagram: ${ig}\n`;
+    if (email) body += `Email: ${email}\n`;
+    body += `Topik: ${topic}\n\nPesan:\n${msg || '[Tulis pesan Anda di sini]'}\n`;
+
+    const subject = `Pesan Portfolio: ${name || 'Pengunjung'} - ${topic}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=meldap145@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, '_blank');
+  });
+}
+
+// Form Submission with Feedback Modal
+const contactForm = document.getElementById('contact-form');
+const contactModal = document.getElementById('contact-modal');
+const modalCloseBtn = document.getElementById('modal-close-btn');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('submit-btn');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '✦ Mengirim pesan...';
+    submitBtn.disabled = true;
+
+    const name = document.getElementById('name').value.trim();
+    const instagram = document.getElementById('instagram').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const topic = document.getElementById('topic').value;
+    const message = document.getElementById('message').value.trim();
+
+    let emailBody = `Halo Melda,\n\nNama: ${name}\n`;
+    if (instagram) emailBody += `Instagram: ${instagram}\n`;
+    if (email) emailBody += `Email: ${email}\n`;
+    emailBody += `Topik: ${topic}\n\nPesan:\n${message}\n`;
+    const emailSubject = `Pesan Portfolio: ${name} - ${topic}`;
+    const directGmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=meldap145@gmail.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    const formData = new FormData(contactForm);
+    formData.set('_captcha', 'false');
+
+    fetch('https://formsubmit.co/ajax/meldap145@gmail.com', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => response.json().catch(() => ({})))
+    .then(() => {
+      showSuccessModal(name, topic, instagram, email, message, directGmailUrl);
+    })
+    .catch(() => {
+      showSuccessModal(name, topic, instagram, email, message, directGmailUrl);
+    })
+    .finally(() => {
+      submitBtn.innerHTML = originalBtnText;
+      submitBtn.disabled = false;
+    });
+  });
+}
+
+function showSuccessModal(name, topic, instagram, email, message, gmailUrl) {
+  document.getElementById('modal-name-display').textContent = name || 'Teman';
+  document.getElementById('modal-sender-display').textContent = name || '-';
+  document.getElementById('modal-topic-display').textContent = topic || '-';
+  const contactText = [email, instagram].filter(Boolean).join(' · ') || 'Tidak dicantumkan';
+  document.getElementById('modal-contact-display').textContent = contactText;
+  document.getElementById('modal-message-display').textContent = `"${message}"`;
+  document.getElementById('modal-gmail-link').href = gmailUrl;
+
+  contactModal.classList.add('open');
+}
+
+if (modalCloseBtn) {
+  modalCloseBtn.addEventListener('click', () => {
+    contactModal.classList.remove('open');
+    contactForm.reset();
+  });
+}
+
+if (contactModal) {
+  contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+      contactModal.classList.remove('open');
+      contactForm.reset();
+    }
+  });
+}
+</script>
+
+</body>
+</html>

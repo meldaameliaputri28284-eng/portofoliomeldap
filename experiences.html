@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050a18">
+<meta name="description" content="Personal portfolio of Melda Amelia Putri.">
+<title>My Experiences | Melda Amelia Putri</title>
+<link rel="stylesheet" href="style.css">
+<script src="stars.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+ <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>Melda Amelia Putri</span></a>
+ <nav class="main-nav" aria-label="Main navigation"><a href="index.html" class="">Home</a>
+<a href="about.html" class="">About Me</a>
+<a href="journey.html" class="">Journey</a>
+<a href="skills.html" class="">Skills</a>
+<a href="achievements.html" class="">Achievements</a>
+<a href="experiences.html" class="active">Experiences</a>
+<a href="certificates.html" class="">Certificates</a>
+<a href="projects.html" class="">Projects</a>
+<a href="interests.html" class="">Interests</a>
+<a href="gallery.html" class="">Gallery</a>
+<a href="contact.html" class="">Contact</a></nav>
+</header>
+<main class="page-shell">
+ <div class="page-heading"><span class="eyebrow">PEOPLE, PURPOSE & LEARNING</span><h1>Experiences that <span>shape me.</span></h1><p class="intro">The moments that help me learn, connect, and grow.</p></div>
+ 
+<div class="experience-list">
+ <!-- 1. RUMAH ASA -->
+ <article class="experience-card">
+  <div class="experience-image" style="cursor: pointer;" onclick="openRumahAsaModal()" title="Klik untuk membuka galeri foto Rumah Asa">
+   <img src="assets/rumah-asa-nadin-artwork.jpg" alt="Melda bersama adik panti asuhan Nadin dan karya seni">
+   <img src="assets/rumah-asa-poster.jpg" alt="Melda memperkenalkan poster komunitas Rumah Asa">
+  </div>
+  <div class="experience-text">
+   <span class="tiny-label">SOCIAL COMMUNITY · FOUNDER</span>
+   <h2>Rumah Asa</h2>
+   <p>Rumah Asa is a social community founded by me and a group of my friends. We created this community to bring young people together to share kindness and happiness with children in orphanages through social activities, playing together, and creating meaningful moments.</p>
+   <div class="button-row">
+    <button type="button" class="button primary" onclick="openRumahAsaModal()">Click to Read More ✦</button>
+    <a class="button" href="https://www.instagram.com/rumahasaofficial/?mdxt=MTVuN3RpczduMnB6Mw==" target="_blank" rel="noopener noreferrer">Visit Rumah Asa Instagram ↗</a>
+   </div>
+  </div>
+ </article>
+
+ <!-- 2. GREAT YOUTH STARTUP EXPLORATION PROGRAM -->
+ <article class="experience-card">
+  <div class="experience-image">
+   <img src="assets/startup-program.jpg" alt="Melda di acara Great Youth Startup Exploration Program">
+  </div>
+  <div class="experience-text">
+   <span class="tiny-label">GOVERNMENT-SUPPORTED STARTUP PROGRAM · PARTICIPANT</span>
+   <h2>Great Youth Startup Exploration Program</h2>
+   <p>Participated in the Great Youth Startup Exploration Program, a startup exploration and funding initiative supported by the Government of Palu City. The program offered new insights, practical exposure, and opportunities to develop entrepreneurial ideas.</p>
+   <p class="date-line">◷ 12 November 2025</p>
+  </div>
+ </article>
+
+ <!-- 3. PODCAST AT UWN MEDIA -->
+ <article class="experience-card">
+  <div class="experience-image">
+   <img src="assets/podcast-uwn-2.jpg" alt="Foto Bersama Ibu Komala Sari di Studio Podcast">
+   <img src="assets/podcast-uwn-1.jpg" alt="Foto Momen Podcast Saat Berbincang">
+  </div>
+  <div class="experience-text">
+   <span class="tiny-label">PODCAST GUEST — UWN MEDIA</span>
+   <h2>3. Podcast at UWN Media</h2>
+   <p>An opportunity to participate in a podcast at UWN Media alongside Mrs. Komala Sari, S.M., M.Si., one of the inspiring figures I admire at Universitas Widya Nusantara.</p>
+   <p>During the podcast, we shared stories and personal experiences about tourism, as well as discussed various topics related to business. It was a valuable opportunity to share experiences, gain new knowledge, and create a memorable moment.</p>
+   <div class="experience-expandable">
+    <button type="button" class="read-more-toggle" aria-expanded="false" onclick="toggleStory(this)">
+     <span>Click to Read More</span> <span class="toggle-arrow">▾</span>
+    </button>
+    <div class="expanded-story" style="display: none;">
+     <blockquote class="story-quote">
+      “A memorable experience at UWN Media, where we shared stories and personal experiences about tourism while discussing various topics related to business. I had the opportunity to share my stories with Mrs. Komala Sari, S.M., M.Si., one of the inspiring figures I admire at Universitas Widya Nusantara. It was a meaningful and unforgettable part of my university journey.”
+     </blockquote>
+    </div>
+   </div>
+  </div>
+ </article>
+</div>
+
+<!-- ====================================================
+     FEATURE: RUMAH ASA DETAIL MODAL & PHOTO GALLERY
+     ==================================================== -->
+<div id="rumah-asa-modal" class="rumah-asa-modal-backdrop" onclick="closeRumahAsaModal(event)">
+  <div class="rumah-asa-modal-box" onclick="event.stopPropagation()">
+    
+    <!-- Modal Header -->
+    <div class="rumah-asa-modal-header">
+      <div class="rumah-asa-header-content">
+        <span class="tiny-label">SOCIAL COMMUNITY · FOUNDER</span>
+        <h2>Rumah Asa</h2>
+      </div>
+      <button type="button" class="rumah-asa-modal-close" onclick="closeRumahAsaModal()" aria-label="Close modal">&times;</button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="rumah-asa-modal-body">
+      <!-- Full Description -->
+      <div class="rumah-asa-modal-description">
+        Rumah Asa is a social community founded by me and a group of my friends. We created this community to bring young people together to share kindness and happiness with children in orphanages through social activities, playing together, and creating meaningful moments.
+      </div>
+
+      <!-- Gallery Header -->
+      <div class="rumah-asa-gallery-title">
+        <h3>✦ Activity Photo Gallery <span class="gallery-count-badge">7 Photos</span></h3>
+        <span class="muted" style="font-size: 0.82rem;">Klik salah satu foto untuk memperbesar (lightbox)</span>
+      </div>
+
+      <!-- Photo Gallery Grid -->
+      <div class="rumah-asa-gallery-grid">
+        <!-- Photo 1: Poster Rumah Asa -->
+        <div class="gallery-card" onclick="openRumahAsaLightbox('assets/rumah-asa-poster.jpg', 'Melda memperkenalkan poster resmi Rumah Asa: Menebarkan Harapan Menumbuhkan Rasa.')">
+          <div class="gallery-card-thumb">
+            <img src="assets/rumah-asa-poster.jpg" alt="Melda memperkenalkan poster resmi Rumah Asa">
+            <div class="gallery-card-overlay">
+              <span class="gallery-zoom-pill">🔍 Zoom</span>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <strong>Introducing Rumah Asa</strong>
+            <span>Melda memperkenalkan poster dan visi Rumah Asa bagi anak-anak panti.</span>
+          </div>
+        </div>
+
+        <!-- Photo 2: Nadin Artwork -->
+        <div class="gallery-card" onclick="openRumahAsaLightbox('assets/rumah-asa-nadin-artwork.jpg', 'Momen kebersamaan mendampingi adik panti asuhan bernama Nadin memegang hasil karya seni tas lukis buatannya.')">
+          <div class="gallery-card-thumb">
+            <img src="assets/rumah-asa-nadin-artwork.jpg" alt="Melda bersama Nadin memegang tas lukis buatan tangan">
+            <div class="gallery-card-overlay">
+              <span class="gallery-zoom-pill">🔍 Zoom</span>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <strong>Handmade Artwork with Nadin</strong>
+            <span>Melda & relawan bersama adik Nadin memegang karya seni tas lukis.</span>
+          </div>
+        </div>
+
+        <!-- Photo 3: Rumah Asa Roof Hand Sign -->
+        <div class="gallery-card" onclick="openRumahAsaLightbox('assets/rumah-asa-roof-sign.jpg', 'Keseruan relawan dan anak-anak membentuk simbol segitiga atap Rumah Asa sebagai lambang kebersamaan.')">
+          <div class="gallery-card-thumb">
+            <img src="assets/rumah-asa-roof-sign.jpg" alt="Simbol atap Rumah Asa bersama anak-anak dan relawan">
+            <div class="gallery-card-overlay">
+              <span class="gallery-zoom-pill">🔍 Zoom</span>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <strong>Signature Rumah Asa Sign</strong>
+            <span>Relawan dan anak-anak berpose dengan simbol atap Rumah Asa.</span>
+          </div>
+        </div>
+
+        <!-- Photo 4: Three Happy Kids -->
+        <div class="gallery-card" onclick="openRumahAsaLightbox('assets/rumah-asa-kids-fun.jpg', 'Keceriaan anak-anak panti asuhan dengan senyuman hangat dan pose jempol saat sesi bermain.')">
+          <div class="gallery-card-thumb">
+            <img src="assets/rumah-asa-kids-fun.jpg" alt="Anak-anak panti asuhan tersenyum bahagia dan berpose jempol">
+            <div class="gallery-card-overlay">
+              <span class="gallery-zoom-pill">🔍 Zoom</span>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <strong>Joyful Smiles & Thumbs Up</strong>
+            <span>Tawa ceria adik-adik panti asuhan saat bermain bersama relawan.</span>
+          </div>
+        </div>
+
+        <!-- Photo 5: Painting Craft Activity -->
+        <div class="gallery-card" onclick="openRumahAsaLightbox('assets/rumah-asa-activity.jpg', 'Kegiatan kreatif mewarnai dan melukis kerajinan tangan bersama anak-anak panti asuhan.')">
+          <div class="gallery-card-thumb">
+            <img src="assets/rumah-asa-activity.jpg" alt="Kegiatan melukis dan mewarnai kerajinan tangan bersama anak-anak">
+            <div class="gallery-card-overlay">
+              <span class="gallery-zoom-pill">🔍 Zoom</span>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <strong>Painting & Craft Workshop</strong>
+            <span>Sesi melukis kreasi tangan untuk menumbuhkan rasa percaya diri anak.</span>
+          </div>
+        </div>
+
+        <!-- Photo 6: Hall Group Gathering -->
+        <div class="gallery-card" onclick="openRumahAsaLightbox('assets/rumah-asa-hall-group.jpg', 'Kebersamaan hangat di dalam aula panti asuhan bersama seluruh anak-anak dan relawan Rumah Asa.')">
+          <div class="gallery-card-thumb">
+            <img src="assets/rumah-asa-hall-group.jpg" alt="Foto bersama di aula panti asuhan dengan anak-anak dan relawan">
+            <div class="gallery-card-overlay">
+              <span class="gallery-zoom-pill">🔍 Zoom</span>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <strong>Hall Gathering & Games</strong>
+            <span>Momen berkumpul bersama di aula panti asuhan penuh kehangatan.</span>
+          </div>
+        </div>
+
+        <!-- Photo 7: Group Photo of Participants -->
+        <div class="gallery-card" onclick="openRumahAsaLightbox('assets/rumah-asa-group.jpg', 'Foto bersama seluruh relawan pendiri dan peserta kegiatan Rumah Asa.')">
+          <div class="gallery-card-thumb">
+            <img src="assets/rumah-asa-group.jpg" alt="Foto bersama seluruh tim dan peserta kegiatan Rumah Asa">
+            <div class="gallery-card-overlay">
+              <span class="gallery-zoom-pill">🔍 Zoom</span>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <strong>All Volunteers & Participants</strong>
+            <span>Foto kenang-kenangan bersama seluruh tim dan adik-adik peserta kegiatan.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="rumah-asa-modal-footer">
+      <a class="button" href="https://www.instagram.com/rumahasaofficial/?mdxt=MTVuN3RpczduMnB6Mw==" target="_blank" rel="noopener noreferrer">Visit Rumah Asa Instagram ↗</a>
+      <button type="button" class="button primary" onclick="closeRumahAsaModal()">Close</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Dedicated Lightbox Modal for Photo Zooming -->
+<div id="rumah-asa-lightbox" class="journey-lightbox" onclick="closeRumahAsaLightbox(event)">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <button type="button" class="lightbox-close" onclick="closeRumahAsaLightbox()" aria-label="Close Lightbox">&times;</button>
+    <img id="ra-lightbox-img" src="" alt="Rumah Asa Documentation">
+    <div id="ra-lightbox-caption" class="lightbox-caption"></div>
+  </div>
+</div>
+
+ <nav class="page-switch" aria-label="Previous and next pages"><a href="achievements.html">← Previous: Achievements</a><span class="page-number">06 / 11</span><a href="certificates.html">Next: Certificates →</a></nav>
+</main>
+<footer class="site-footer"><div><strong>Melda Amelia Putri</strong><br><span class="footer-motto">“Creating my own path, embracing every journey.”</span></div><div>© 2026 Melda Amelia Putri. All Rights Reserved.</div></footer>
+
+<script>
+function toggleStory(button) {
+  const story = button.nextElementSibling;
+  const isHidden = story.style.display === 'none' || story.style.display === '';
+  const textSpan = button.querySelector('span:first-child');
+
+  if (isHidden) {
+    story.style.display = 'block';
+    button.classList.add('open');
+    button.setAttribute('aria-expanded', 'true');
+    textSpan.textContent = 'Show Less';
+  } else {
+    story.style.display = 'none';
+    button.classList.remove('open');
+    button.setAttribute('aria-expanded', 'false');
+    textSpan.textContent = 'Click to Read More';
+  }
+}
+
+function openRumahAsaModal() {
+  const modal = document.getElementById('rumah-asa-modal');
+  if (modal) {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeRumahAsaModal(e) {
+  const modal = document.getElementById('rumah-asa-modal');
+  if (modal) {
+    modal.classList.remove('open');
+    const lb = document.getElementById('rumah-asa-lightbox');
+    if (!lb || !lb.classList.contains('open')) {
+      document.body.style.overflow = '';
+    }
+  }
+}
+
+function openRumahAsaLightbox(src, caption) {
+  const lb = document.getElementById('rumah-asa-lightbox');
+  const img = document.getElementById('ra-lightbox-img');
+  const cap = document.getElementById('ra-lightbox-caption');
+  if (!lb || !img) return;
+  img.src = src;
+  if (cap) cap.textContent = caption || '';
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeRumahAsaLightbox(e) {
+  const lb = document.getElementById('rumah-asa-lightbox');
+  if (!lb) return;
+  lb.classList.remove('open');
+  const modal = document.getElementById('rumah-asa-modal');
+  if (!modal || !modal.classList.contains('open')) {
+    document.body.style.overflow = '';
+  }
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const lb = document.getElementById('rumah-asa-lightbox');
+    if (lb && lb.classList.contains('open')) {
+      closeRumahAsaLightbox();
+    } else {
+      closeRumahAsaModal();
+    }
+  }
+});
+</script>
+</body>
+</html>

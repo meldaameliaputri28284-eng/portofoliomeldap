@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050a18">
+<meta name="description" content="Personal portfolio of Melda Amelia Putri.">
+<title>My Skills | Melda Amelia Putri</title>
+<link rel="stylesheet" href="style.css">
+<script src="stars.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+ <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>Melda Amelia Putri</span></a>
+ <nav class="main-nav" aria-label="Main navigation"><a href="index.html" class="">Home</a>
+<a href="about.html" class="">About Me</a>
+<a href="journey.html" class="">Journey</a>
+<a href="skills.html" class="active">Skills</a>
+<a href="achievements.html" class="">Achievements</a>
+<a href="experiences.html" class="">Experiences</a>
+<a href="certificates.html" class="">Certificates</a>
+<a href="projects.html" class="">Projects</a>
+<a href="interests.html" class="">Interests</a>
+<a href="gallery.html" class="">Gallery</a>
+<a href="contact.html" class="">Contact</a></nav>
+</header>
+<main class="page-shell">
+ <div class="page-heading"><span class="eyebrow">THINGS I LOVE TO DO</span><h1>Skills & <span>little passions.</span></h1><p class="intro">Some things I enjoy practicing, creating, and discovering.</p></div>
+ 
+<div class="skill-grid">
+ <article class="skill-card">
+  <div class="skill-slider-container" id="slider-diving">
+   <div class="skill-slide-badge">
+    <span class="slide-counter">1 / 3</span>
+    <span class="slide-hint">✦ Klik untuk ganti foto</span>
+   </div>
+   <div class="skill-slider-viewport" title="Klik foto untuk melihat foto berikutnya">
+    <div class="skill-slider-track">
+     <div class="skill-slide">
+      <img src="assets/diving-sea.jpg" alt="Laut biru dan perlengkapan diving">
+      <span class="slide-caption-tag">Under the Deep Blue Sea</span>
+     </div>
+     <div class="skill-slide">
+      <img src="assets/diving-1.jpg" alt="Melda dan rekan saat sesi latihan diving di kolam renang">
+      <span class="slide-caption-tag">Freediving Pool Training</span>
+     </div>
+     <div class="skill-slide">
+      <img src="assets/diving-2.jpg" alt="Kebersamaan tim dan komunitas diving di malam hari">
+      <span class="slide-caption-tag">Freediving Team & Community</span>
+     </div>
+    </div>
+   </div>
+   <div class="slider-dots">
+    <span class="dot active" data-index="0" title="Foto 1"></span>
+    <span class="dot" data-index="1" title="Foto 2"></span>
+    <span class="dot" data-index="2" title="Foto 3"></span>
+   </div>
+  </div>
+  <div class="skill-card-content">
+   <span class="tiny-label">ADVENTURE · 01</span>
+   <h2>Diving</h2>
+   <p>The ocean reminds me how beautiful it is to explore beyond what we already know. I love the feeling of discovering a different world beneath the surface.</p>
+  </div>
+ </article>
+
+ <article class="skill-card">
+  <div class="skill-slider-container" id="slider-painting">
+   <div class="skill-slide-badge">
+    <span class="slide-counter">1 / 3</span>
+    <span class="slide-hint">✦ Klik untuk ganti foto</span>
+   </div>
+   <div class="skill-slider-viewport" title="Klik foto untuk melihat foto berikutnya">
+    <div class="skill-slider-track">
+     <div class="skill-slide">
+      <img src="assets/painting-indonesia.jpg" alt="Lukisan peta Indonesia karya Melda">
+      <span class="slide-caption-tag">Map of Indonesia Artwork</span>
+     </div>
+     <div class="skill-slide">
+      <img src="assets/painting-1.jpg" alt="Lukisan kapal layar di tengah badai ombak dan gunung berapi">
+      <span class="slide-caption-tag">Sailing Through the Storm</span>
+     </div>
+     <div class="skill-slide">
+      <img src="assets/painting-2.jpg" alt="Lukisan matahari terbenam nuansa senja di tepi dermaga">
+      <span class="slide-caption-tag">Sunset Reflections by the Pier</span>
+     </div>
+    </div>
+   </div>
+   <div class="slider-dots">
+    <span class="dot active" data-index="0" title="Foto 1"></span>
+    <span class="dot" data-index="1" title="Foto 2"></span>
+    <span class="dot" data-index="2" title="Foto 3"></span>
+   </div>
+  </div>
+  <div class="skill-card-content">
+   <span class="tiny-label">ART · 02</span>
+   <h2>Painting</h2>
+   <p>Painting gives me space to express ideas, slow down, and turn inspiration into something tangible.</p>
+  </div>
+ </article>
+</div>
+<div class="note-card">✧ Always learning, always growing. These are passions I want to keep exploring and developing.</div>
+
+ <nav class="page-switch" aria-label="Previous and next pages"><a href="journey.html">← Previous: Journey</a><span class="page-number">04 / 11</span><a href="achievements.html">Next: Achievements →</a></nav>
+</main>
+<footer class="site-footer"><div><strong>Melda Amelia Putri</strong><br><span class="footer-motto">“Creating my own path, embracing every journey.”</span></div><div>© 2026 Melda Amelia Putri. All Rights Reserved.</div></footer>
+
+<script>
+function setupSlider(sliderId) {
+  const container = document.getElementById(sliderId);
+  if (!container) return;
+  const viewport = container.querySelector('.skill-slider-viewport');
+  const track = container.querySelector('.skill-slider-track');
+  const slides = container.querySelectorAll('.skill-slide');
+  const prevBtn = container.querySelector('.slider-nav-btn.prev');
+  const nextBtn = container.querySelector('.slider-nav-btn.next');
+  const dots = container.querySelectorAll('.slider-dots .dot');
+  const counter = container.querySelector('.slide-counter');
+  let currentIndex = 0;
+  const total = slides.length;
+
+  function goToSlide(index) {
+    currentIndex = (index + total) % total;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+    if (counter) {
+      counter.textContent = `${currentIndex + 1} / ${total}`;
+    }
+  }
+
+  viewport.addEventListener('click', () => {
+    goToSlide(currentIndex + 1);
+  });
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goToSlide(currentIndex + 1);
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goToSlide(currentIndex - 1);
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetIdx = parseInt(dot.getAttribute('data-index'), 10);
+      goToSlide(targetIdx);
+    });
+  });
+
+  let startX = 0;
+  viewport.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  viewport.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) goToSlide(currentIndex + 1);
+      else goToSlide(currentIndex - 1);
+    }
+  }, { passive: true });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupSlider('slider-diving');
+  setupSlider('slider-painting');
+});
+</script>
+</body>
+</html>

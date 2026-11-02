@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050a18">
+<meta name="description" content="Personal portfolio of Melda Amelia Putri.">
+<title>Home | Melda Amelia Putri</title>
+<link rel="stylesheet" href="style.css">
+<script src="stars.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+ <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>Melda Amelia Putri</span></a>
+ <nav class="main-nav" aria-label="Main navigation"><a href="index.html" class="active">Home</a>
+<a href="about.html" class="">About Me</a>
+<a href="journey.html" class="">Journey</a>
+<a href="skills.html" class="">Skills</a>
+<a href="achievements.html" class="">Achievements</a>
+<a href="experiences.html" class="">Experiences</a>
+<a href="certificates.html" class="">Certificates</a>
+<a href="projects.html" class="">Projects</a>
+<a href="interests.html" class="">Interests</a>
+<a href="gallery.html" class="">Gallery</a>
+<a href="contact.html" class="">Contact</a></nav>
+</header>
+<main class="page-shell">
+ <div class="page-heading"><span class="eyebrow">WELCOME TO MY UNIVERSE</span><h1>Hi, I'm <span>Melda Amelia Putri</span>!</h1><p class="intro">Creative mind, curious heart, and a soul that loves meaningful journeys.</p></div>
+ 
+<div class="hero-grid">
+  <div class="hero-copy">
+    <p class="lead">I am a creative, adaptable, and open-minded person who enjoys exploring new ideas and experiences. I value kindness, meaningful connections, and continuous self-growth.</p>
+    <p>I believe every new experience can teach me something valuable. Here’s a little universe of my stories, interests, achievements, and dreams.</p>
+    <div class="quote-card"><span class="tiny-label">MY LIFE MOTTO</span><p>“Creating my own path, embracing every journey.”</p></div>
+    <div class="button-row"><a class="button primary" href="about.html">Get to know me <span>↗</span></a><a class="button" href="gallery.html">Explore my gallery</a></div>
+  </div>
+  <div class="hero-photo photo-frame" id="hero-photo-slider">
+    <div class="hero-slider-viewport" title="Klik foto untuk melihat foto berikutnya">
+      <div class="hero-slider-track">
+        <div class="hero-slide">
+          <img src="assets/miss-sulawesi-portrait.jpg" alt="Melda mengenakan mahkota dan selempang Miss Sulawesi Tengah">
+          <div class="photo-tag">✦ a little stardust, a lot of dreams</div>
+        </div>
+        <div class="hero-slide">
+          <img src="assets/hero-almet.jpg" alt="Melda mengenakan jas almamater kuning Universitas Widya Nusantara">
+          <div class="photo-tag">✦ Universitas Widya Nusantara · My College Journey</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-dots" aria-label="Ganti foto profile">
+      <span class="hero-dot active" data-index="0" title="Foto 1: Miss Sulawesi Tengah"></span>
+      <span class="hero-dot" data-index="1" title="Foto 2: Almamater Kuliah"></span>
+    </div>
+  </div>
+</div>
+<div class="stat-row"><div><strong>01</strong><span>Creative soul</span></div><div><strong>∞</strong><span>Things to learn</span></div><div><strong>♡</strong><span>Meaningful moments</span></div></div>
+
+ <nav class="page-switch" aria-label="Previous and next pages"><a href="contact.html">← Previous: Contact</a><span class="page-number">01 / 11</span><a href="about.html">Next: About Me →</a></nav>
+</main>
+<footer class="site-footer"><div><strong>Melda Amelia Putri</strong><br><span class="footer-motto">“Creating my own path, embracing every journey.”</span></div><div>© 2026 Melda Amelia Putri. All Rights Reserved.</div></footer>
+
+<script>
+function setupHeroSlider() {
+  const container = document.getElementById('hero-photo-slider');
+  if (!container) return;
+  const viewport = container.querySelector('.hero-slider-viewport');
+  const track = container.querySelector('.hero-slider-track');
+  const dots = container.querySelectorAll('.hero-dots .hero-dot');
+  let currentIndex = 0;
+  const total = 2;
+
+  function goToSlide(index) {
+    currentIndex = (index + total) % total;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === currentIndex);
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const idx = parseInt(dot.getAttribute('data-index'), 10);
+      goToSlide(idx);
+    });
+  });
+
+  viewport.addEventListener('click', () => {
+    goToSlide(currentIndex + 1);
+  });
+
+  let startX = 0;
+  viewport.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  viewport.addEventListener('touchend', (e) => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) goToSlide(currentIndex + 1);
+      else goToSlide(currentIndex - 1);
+    }
+  }, { passive: true });
+}
+
+document.addEventListener('DOMContentLoaded', setupHeroSlider);
+</script>
+</body>
+</html>

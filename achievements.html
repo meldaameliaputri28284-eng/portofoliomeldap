@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050a18">
+<meta name="description" content="Personal portfolio of Melda Amelia Putri.">
+<title>My Achievements | Melda Amelia Putri</title>
+<link rel="stylesheet" href="style.css">
+<script src="stars.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+ <a class="brand" href="index.html"><span class="brand-mark">✦</span><span>Melda Amelia Putri</span></a>
+ <nav class="main-nav" aria-label="Main navigation"><a href="index.html" class="">Home</a>
+<a href="about.html" class="">About Me</a>
+<a href="journey.html" class="">Journey</a>
+<a href="skills.html" class="">Skills</a>
+<a href="achievements.html" class="active">Achievements</a>
+<a href="experiences.html" class="">Experiences</a>
+<a href="certificates.html" class="">Certificates</a>
+<a href="projects.html" class="">Projects</a>
+<a href="interests.html" class="">Interests</a>
+<a href="gallery.html" class="">Gallery</a>
+<a href="contact.html" class="">Contact</a></nav>
+</header>
+<main class="page-shell">
+ <div class="page-heading"><span class="eyebrow">A MOMENT I'LL ALWAYS TREASURE</span><h1>Little wins, <span>big meaning.</span></h1><p class="intro">Every achievement represents a journey, effort, and courage.</p></div>
+ 
+<div class="achievement-feature">
+ <div class="photo-frame"><img src="assets/miss-sulawesi-portrait.jpg" alt="Melda dengan mahkota dan selempang Miss Sulawesi Tengah"></div>
+ <div class="achievement-copy"><span class="tiny-label">PAGEANT · PERSONAL MILESTONE</span><h2>Runner-Up Miss Sulawesi Tengah</h2><p>A meaningful experience that represents courage, confidence, and the willingness to step outside my comfort zone.</p><p>This chapter reminds me to keep showing up, embrace every lesson, and trust the process.</p><div class="mini-gallery"><img src="assets/certificate-miss-runner-up.jpg" alt="Piagam Runner Up Miss Sulawesi Tengah 2025"><img src="assets/miss-sash-interior.jpg" alt="Melda mengenakan selempang saat acara"></div></div>
+</div>
+
+<!-- ====================================================
+     FEATURE: MY PAGEANT JOURNEY (Interactive 3-Stage Story Hub)
+     ==================================================== -->
+<section class="my-journey-hub" id="my-pageant-journey-section">
+  <!-- TAHAP 1: Header & Tombol Explore My Pageant Journey -->
+  <div class="journey-hub-header">
+    <span class="tiny-label">MEMORIES & MILESTONES</span>
+    <h2>My Pageant Journey</h2>
+    <p class="journey-hub-subtitle">“Every moment has a story to tell.”</p>
+    <button type="button" class="button primary journey-explore-btn" id="btn-explore-journey" onclick="openJourneyPicker()">
+      Explore My Pageant Journey ↓
+    </button>
+  </div>
+
+  <!-- TAHAP 2: 3 Pilihan Journey (Terbuka saat tombol Explore My Pageant Journey diklik) -->
+  <div class="journey-picker-wrapper" id="journey-picker" style="display: none;">
+    <div class="journey-picker-intro">
+      <span class="tiny-label">CHOOSE A CHAPTER</span>
+      <h3>Select a Journey to Explore</h3>
+      <p>Klik salah satu kartu di bawah ini untuk melihat dokumentasi foto dan cerita lengkap di baliknya.</p>
+    </div>
+
+    <div class="journey-cards-grid">
+      <!-- Card 1: The People Behind My Journey -->
+      <article class="journey-select-card" onclick="openJourneyDetail('people')">
+        <div class="journey-card-media">
+          <img src="assets/journey-people-1.jpg" alt="Foto bersama teman-teman setelah proses pageant">
+          <span class="journey-card-badge">Chapter 01</span>
+        </div>
+        <div class="journey-card-body">
+          <span class="journey-meta-tag">SUPPORT SYSTEM · MISS SULTENG 2025</span>
+          <h4>The People Behind My Journey</h4>
+          <p>Cerita tentang teman-teman yang telah mendukung, menemani, memberikan semangat, dan menjadi bagian dari perjalanan saya selama proses pemilihan hingga meraih Runner-Up Miss Sulawesi Tengah 2025.</p>
+          <div class="journey-card-action">
+            <span>Read full story & gallery</span>
+            <strong>→</strong>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Social Activity at TPA Kawatuna -->
+      <article class="journey-select-card" onclick="openJourneyDetail('kawatuna')">
+        <div class="journey-card-media">
+          <img src="assets/journey-kawatuna-1.jpg" alt="Kegiatan sosial pencegahan stunting di TPA Kawatuna">
+          <span class="journey-card-badge">Chapter 02</span>
+        </div>
+        <div class="journey-card-body">
+          <span class="journey-meta-tag">SOCIAL ADVOCACY · TPA KAWATUNA</span>
+          <h4>Social Activity at TPA Kawatuna</h4>
+          <p>Cerita tentang kegiatan sosial dan edukasi pencegahan stunting bersama anak-anak dan warga di TPA Kawatuna, Palu.</p>
+          <div class="journey-card-action">
+            <span>Read full story & gallery</span>
+            <strong>→</strong>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: A Moment of Independence -->
+      <article class="journey-select-card" onclick="openJourneyDetail('independence')">
+        <div class="journey-card-media">
+          <img src="assets/journey-independence-1.jpg" alt="Menghadiri Upacara 17 Agustus di Kantor Wali Kota">
+          <span class="journey-card-badge">Chapter 03</span>
+        </div>
+        <div class="journey-card-body">
+          <span class="journey-meta-tag">OFFICIAL INVITATION · 17 AGUSTUS</span>
+          <h4>A Moment of Independence</h4>
+          <p>Pengalaman berharga menghadiri undangan resmi upacara peringatan Hari Kemerdekaan Republik Indonesia 17 Agustus di Kantor Wali Kota.</p>
+          <div class="journey-card-action">
+            <span>Read full story & gallery</span>
+            <strong>→</strong>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="journey-picker-footer">
+      <button type="button" class="button" onclick="closeJourneyPicker()">Tutup Pilihan ↑</button>
+    </div>
+  </div>
+
+  <!-- TAHAP 3: Detail Setiap Journey (Muncul saat salah satu card diklik) -->
+  <div class="journey-details-container" id="journey-details-container" style="display: none;">
+    
+    <!-- DETAIL 1: THE PEOPLE BEHIND MY JOURNEY -->
+    <div class="journey-detail-panel" id="detail-people" style="display: none;">
+      <div class="detail-nav-top">
+        <button type="button" class="back-btn" onclick="backToJourneyPicker()">← Kembali ke Pilihan Journey</button>
+        <span class="detail-counter-pill">Chapter 01 of 03</span>
+      </div>
+
+      <div class="detail-header">
+        <div class="detail-meta-row">
+          <span class="detail-tag">PAGEANT SUPPORT SYSTEM</span>
+          <span class="detail-year">✦ Tahun: 2025</span>
+          <span class="detail-location">📍 Lokasi: Palu, Sulawesi Tengah</span>
+        </div>
+        <h3>The People Behind My Journey</h3>
+        <p class="detail-lead">Perjalanan meraih Runner-Up Miss Sulawesi Tengah 2025 tidak pernah ditempuh sendirian. Di setiap langkah, ada doa, tenaga, dan tawa tulus dari sahabat-sahabat terbaik.</p>
+      </div>
+
+      <!-- Scrapbook Gallery -->
+      <div class="scrapbook-gallery single">
+        <figure class="scrapbook-item polaroid" onclick="openLightbox('assets/journey-people-1.jpg', 'Momen kebersamaan penuh kehangatan bersama sahabat-sahabat tercinta sesaat setelah penganugerahan Runner-Up Miss Sulawesi Tengah 2025.')">
+          <div class="washi-tape"></div>
+          <div class="scrapbook-photo-wrap">
+            <img src="assets/journey-people-1.jpg" alt="Foto bersama teman-teman setelah proses pageant">
+            <span class="zoom-indicator">🔍 Klik untuk perbesar</span>
+          </div>
+          <figcaption>
+            <strong>Sahabat & Support System Terbaik</strong>
+            <span>Momen tulus seusai malam penganugerahan Runner-Up Miss Sulawesi Tengah 2025 bersama sahabat tercinta.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Narrative Story Box -->
+      <div class="journey-narrative-box">
+        <span class="narrative-badge">CATATAN PERJALANAN</span>
+        <p>Di balik kilau selempang dan panggung megah Miss Sulawesi Tengah 2025, ada orang-orang luar biasa yang berdiri teguh di belakang layar. Teman-teman yang tak pernah lelah memberikan semangat saat rasa lelah melanda, yang selalu mengingatkan saya untuk percaya pada diri sendiri, dan yang dengan tulus meluangkan waktu mereka untuk hadir dan mendampingi saya di setiap tahap kompetisi.</p>
+        <div class="journey-quote">
+          “Gelar dan pencapaian ini bukan hanya milik saya pribadi, melainkan persembahan penuh rasa syukur untuk setiap cinta, doa, dan dukungan yang mereka titipkan di setiap langkah perjalanan ini.”
+        </div>
+        <p>Foto ini merekam kehangatan dan kelegaan setelah melewati proses karantina hingga grand final. Melihat senyum bangga di wajah mereka adalah salah satu hadiah terindah yang tak ternilai harganya.</p>
+      </div>
+
+      <div class="detail-nav-bottom">
+        <button type="button" class="back-btn" onclick="backToJourneyPicker()">← Kembali ke Pilihan Journey</button>
+      </div>
+    </div>
+
+    <!-- DETAIL 2: SOCIAL ACTIVITY AT TPA KAWATUNA -->
+    <div class="journey-detail-panel" id="detail-kawatuna" style="display: none;">
+      <div class="detail-nav-top">
+        <button type="button" class="back-btn" onclick="backToJourneyPicker()">← Kembali ke Pilihan Journey</button>
+        <span class="detail-counter-pill">Chapter 02 of 03</span>
+      </div>
+
+      <div class="detail-header">
+        <div class="detail-meta-row">
+          <span class="detail-tag">SOCIAL ADVOCACY & HEALTH</span>
+          <span class="detail-year">✦ Tahun: 2026</span>
+          <span class="detail-location">📍 Lokasi: TPA Kawatuna, Palu</span>
+        </div>
+        <h3>Social Activity at TPA Kawatuna</h3>
+        <p class="detail-lead">Aksi nyata turun langsung ke masyarakat: Edukasi pencegahan stunting dan berbagi kebahagiaan bersama anak-anak serta keluarga di lingkungan TPA Kawatuna.</p>
+      </div>
+
+      <!-- Scrapbook Gallery (Pair) -->
+      <div class="scrapbook-gallery pair">
+        <figure class="scrapbook-item polaroid" onclick="openLightbox('assets/journey-kawatuna-1.jpg', 'Dokumentasi edukasi stunting dan penyerahan bingkisan nutrisi bersama anak-anak di TPA Kawatuna, Palu.')">
+          <div class="washi-tape"></div>
+          <div class="scrapbook-photo-wrap">
+            <img src="assets/journey-kawatuna-1.jpg" alt="Kegiatan edukasi pencegahan stunting di TPA Kawatuna">
+            <span class="zoom-indicator">🔍 Klik untuk perbesar</span>
+          </div>
+          <figcaption>
+            <strong>Edukasi Bersama Anak-Anak Kawatuna</strong>
+            <span>Menghadirkan edukasi gizi ceria serta berbagi paket nutrisi untuk anak-anak di kawasan TPA Kawatuna.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="scrapbook-item polaroid" onclick="openLightbox('assets/journey-kawatuna-2.jpg', 'Foto bersama tim relawan pageant, warga, dan adik-adik di TPA Kawatuna di bawah spanduk Cegah Stunting.')">
+          <div class="washi-tape"></div>
+          <div class="scrapbook-photo-wrap">
+            <img src="assets/journey-kawatuna-2.jpg" alt="Foto bersama anak-anak dan warga TPA Kawatuna">
+            <span class="zoom-indicator">🔍 Klik untuk perbesar</span>
+          </div>
+          <figcaption>
+            <strong>Cegah Stunting Generasi Emas</strong>
+            <span>Foto kebersamaan tim dan anak-anak penuh senyum di balik kampanye Cegah Stunting Demi Generasi Lebih Stunning.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Narrative Story Box -->
+      <div class="journey-narrative-box">
+        <span class="narrative-badge">CATATAN PERJALANAN</span>
+        <p>Bagi saya, sebuah platform kecantikan dan advokasi hanya memiliki makna sesungguhnya ketika kita mampu menyentuh langsung kehidupan orang lain. Kegiatan advokasi di TPA Kawatuna ini merupakan wujud kepedulian terhadap isu krusial di daerah kami: pencegahan stunting dan pentingnya gizi seimbang sejak dini.</p>
+        <div class="journey-quote">
+          “Melihat binar mata dan tawa polos anak-anak Kawatuna mengajarkan saya bahwa kebahagiaan terbesar datang dari kepedulian yang tulus dan kehadiran yang bermakna bagi sesama.”
+        </div>
+        <p>Kami berdialog dengan para ibu, memberikan pemahaman sederhana mengenai pemenuhan gizi anak, membagikan bingkisan makanan bergizi, dan bermain bersama adik-adik di sana. Pengalaman ini terus membakar semangat saya untuk berkontribusi lebih bagi masyarakat.</p>
+      </div>
+
+      <div class="detail-nav-bottom">
+        <button type="button" class="back-btn" onclick="backToJourneyPicker()">← Kembali ke Pilihan Journey</button>
+      </div>
+    </div>
+
+    <!-- DETAIL 3: A MOMENT OF INDEPENDENCE -->
+    <div class="journey-detail-panel" id="detail-independence" style="display: none;">
+      <div class="detail-nav-top">
+        <button type="button" class="back-btn" onclick="backToJourneyPicker()">← Kembali ke Pilihan Journey</button>
+        <span class="detail-counter-pill">Chapter 03 of 03</span>
+      </div>
+
+      <div class="detail-header">
+        <div class="detail-meta-row">
+          <span class="detail-tag">STATE CEREMONY & CIVIC ENGAGEMENT</span>
+          <span class="detail-year">✦ Tahun: 2026</span>
+          <span class="detail-location">📍 Lokasi: Halaman Kantor Wali Kota Palu</span>
+        </div>
+        <h3>A Moment of Independence</h3>
+        <p class="detail-lead">Sebuah kehormatan istimewa menghadiri upacara peringatan HUT ke-80 Kemerdekaan Republik Indonesia di Kantor Wali Kota bersama jajaran pemerintah daerah dan perwakilan pageant.</p>
+      </div>
+
+      <!-- Scrapbook Gallery (Trio) -->
+      <div class="scrapbook-gallery trio">
+        <figure class="scrapbook-item polaroid" onclick="openLightbox('assets/journey-independence-1.jpg', 'Berdiri di tangga utama kehormatan Kantor Wali Kota dengan busana adat bernuansa merah putih yang megah.')">
+          <div class="washi-tape"></div>
+          <div class="scrapbook-photo-wrap">
+            <img src="assets/journey-independence-1.jpg" alt="Foto di tangga kehormatan Kantor Wali Kota">
+            <span class="zoom-indicator">🔍 Klik untuk perbesar</span>
+          </div>
+          <figcaption>
+            <strong>Tangga Kehormatan Kemerdekaan</strong>
+            <span>Menghadiri upacara HUT RI dengan busana kebaya elegan berlatar dekorasi merah putih Kantor Wali Kota.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="scrapbook-item polaroid" onclick="openLightbox('assets/journey-independence-2.jpg', 'Potret Melda mengenakan selempang kehormatan di podium upacara bendera 17 Agustus.')">
+          <div class="washi-tape"></div>
+          <div class="scrapbook-photo-wrap">
+            <img src="assets/journey-independence-2.jpg" alt="Melda di podium upacara kemerdekaan">
+            <span class="zoom-indicator">🔍 Klik untuk perbesar</span>
+          </div>
+          <figcaption>
+            <strong>Hikmat & Kebanggaan</strong>
+            <span>Momen khidmat saat menyaksikan pengibaran Sang Saka Merah Putih dari tribun undangan terhormat.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="scrapbook-item polaroid" onclick="openLightbox('assets/journey-independence-3.jpg', 'Bersama rekan-rekan duta dan tamu undangan VIP di selasar Kantor Wali Kota Palu.')">
+          <div class="washi-tape"></div>
+          <div class="scrapbook-photo-wrap">
+            <img src="assets/journey-independence-3.jpg" alt="Bersama rekan-rekan pageant dan duta daerah di Kantor Wali Kota">
+            <span class="zoom-indicator">🔍 Klik untuk perbesar</span>
+          </div>
+          <figcaption>
+            <strong>Sinergi Duta Muda Daerah</strong>
+            <span>Bersilaturahmi dan berdiskusi bersama para pemuda berprestasi dan perwakilan organisasi kota.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Narrative Story Box -->
+      <div class="journey-narrative-box">
+        <span class="narrative-badge">CATATAN PERJALANAN</span>
+        <p>Mendapatkan undangan resmi untuk menghadiri Upacara Peringatan Hari Kemerdekaan Republik Indonesia 17 Agustus di Kantor Wali Kota merupakan pengalaman yang membanggakan sekaligus penuh makna nasionalisme. Di tengah riuhnya peringatan kemerdekaan, saya merasakan getaran bangga sebagai generasi muda Sulawesi Tengah.</p>
+        <div class="journey-quote">
+          “Kemerdekaan bukan hanya tentang mengenang perjuangan masa lalu, tapi tentang bagaimana generasi kita hari ini mengisi ruang-ruang karya dengan dedikasi, integritas, dan pengabdian nyata.”
+        </div>
+        <p>Mengenakan busana daerah terbaik dan berdiri bersama para tokoh pemerintahan serta duta-duta muda lainnya menegaskan kembali tekad saya untuk terus menjadi perwakilan daerah yang membanggakan, berdaya, dan menginspirasi.</p>
+      </div>
+
+      <div class="detail-nav-bottom">
+        <button type="button" class="back-btn" onclick="backToJourneyPicker()">← Kembali ke Pilihan Journey</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox Modal untuk Zoom Foto -->
+<div id="journey-lightbox" class="journey-lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <button type="button" class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="Zoom Foto Dokumentasi">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+</div>
+
+<script>
+function openJourneyPicker() {
+  const picker = document.getElementById('journey-picker');
+  const details = document.getElementById('journey-details-container');
+  if (picker) {
+    picker.style.display = 'block';
+    if (details) details.style.display = 'none';
+    picker.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function closeJourneyPicker() {
+  const picker = document.getElementById('journey-picker');
+  if (picker) {
+    picker.style.display = 'none';
+    const hub = document.getElementById('my-pageant-journey-section');
+    if (hub) hub.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function openJourneyDetail(journeyKey) {
+  const picker = document.getElementById('journey-picker');
+  const detailsContainer = document.getElementById('journey-details-container');
+  if (!detailsContainer) return;
+
+  if (picker) picker.style.display = 'none';
+  detailsContainer.style.display = 'block';
+
+  // Hide all panels
+  const panels = detailsContainer.querySelectorAll('.journey-detail-panel');
+  panels.forEach(p => p.style.display = 'none');
+
+  // Show target panel
+  const target = document.getElementById('detail-' + journeyKey);
+  if (target) {
+    target.style.display = 'flex';
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function backToJourneyPicker() {
+  const detailsContainer = document.getElementById('journey-details-container');
+  const picker = document.getElementById('journey-picker');
+  if (detailsContainer) detailsContainer.style.display = 'none';
+  if (picker) {
+    picker.style.display = 'block';
+    picker.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function openLightbox(src, caption) {
+  const modal = document.getElementById('journey-lightbox');
+  const img = document.getElementById('lightbox-img');
+  const cap = document.getElementById('lightbox-caption');
+  if (!modal || !img) return;
+  img.src = src;
+  if (cap) cap.textContent = caption || '';
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  const modal = document.getElementById('journey-lightbox');
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});
+</script>
+
+ <nav class="page-switch" aria-label="Previous and next pages"><a href="skills.html">← Previous: Skills</a><span class="page-number">05 / 11</span><a href="experiences.html">Next: Experiences →</a></nav>
+</main>
+<footer class="site-footer"><div><strong>Melda Amelia Putri</strong><br><span class="footer-motto">“Creating my own path, embracing every journey.”</span></div><div>© 2026 Melda Amelia Putri. All Rights Reserved.</div></footer>
+</body>
+</html>
